@@ -8,6 +8,7 @@ import { ScrollTrigger } from 'gsap/all';
 import CenterText from './components/CenterText';
 import Paragraph from './components/Paragraph';
 import Bottom from './components/Bottom';
+import Footer from './components/Footer';
 
 const App = () => {
   const locomotiveScroll = new LocomotiveScroll();
@@ -38,7 +39,7 @@ const App = () => {
   })
 
   return (
-    <div ref={mainRef} className='bg-[salmon] min-h-screen w-full'>
+    <div ref={mainRef} className='bg-[salmon] min-h-screen w-full relative'>
       <Nav />
       <div id="center" className='relative'>
         < CenterText />
@@ -46,6 +47,7 @@ const App = () => {
         < Bottom />
         <img ref={imageRef} src={phool} alt="" className='top-0 left-0 fixed h-[77vw]' />
       </div>
+      < Footer />
     </div>
   )
 }
